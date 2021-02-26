@@ -1,0 +1,45 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+
+
+<head>
+
+    <meta charset="utf-8" />
+
+    <meta name="theme-color" content="#fff" />
+    <meta name="msapplication-navbutton-color" content="#fff" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#fff" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+
+    <title>{% block title %}Neural University Test{% endblock title %}</title>
+
+    <link rel="icon" href="https://static.tildacdn.com/tild3538-3730-4337-b963-666161633234/_1.ico" type="image/x-icon" />
+
+    {% block css %}
+        <link rel="stylesheet" href="{% static 'css/reset.css' %}" />
+        <link rel="stylesheet" href="{% static 'css/fonts.css' %}" />
+        <link rel="stylesheet" href="{% static 'css/layout.css' %}" />
+    {% endblock css %}
+
+</head>
+
+
+<body>
+
+    <main>
+        {% block content %}{% endblock content %}
+    </main>
+
+    {% block js %}
+        <script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/jquery.cookie.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/front.js' %}"></script>
+    {% endblock js %}
+
+</body>
+
+
+</html>

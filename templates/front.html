@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags utils %}
+
+{% block content %}
+
+    <h1>Добро пожаловать, <b>{{ request.user }}</b>!</h1>
+
+    <div class="front-page">
+
+        {% crispy form %}
+
+        <br /><hr /><br />
+
+        <form class="file-upload" enctype="multipart/form-data">
+            <input type="file" accept="image/png, image/jpeg, image/jpg" name="image" class="file-upload-field" />
+        </form>
+
+        <br />
+
+        <table class="list-images">
+            <thead>
+                <tr>
+                    <th>Изображение</th>
+                    <th style="width:100%">История</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% if object_list %}
+                    {% for image in object_list %}
+                        <tr class="id-{{ image.id }}">
+                            <td class="image"><img src="{{ image.image.url }}" alt="" /></td>
+                            <td class="history">
+                                {% for history in image.history %}
+                                    <div><code>{% date_format history.date_created %}</code> {{ history.field_value }}</div>
+                                {% endfor %}
+                            </td>
+                            <td class="update"><span data-id="{{ image.id }}">Обновить</span></td>
+                        </tr>
+                    {% endfor %}
+                {% else %}
+                    <tr class="empty">
+                        <td colspan="3">Изображения не найдены</td>
+                    </tr>
+                {% endif %}
+            </tbody>
+        </table>
+
+    </div>
+
+{% endblock content %}

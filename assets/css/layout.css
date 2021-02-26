@@ -1,0 +1,81 @@
+/* BASE */
+
+body {
+    font:400 16px/1.5 'Roboto', sans-serif;
+    background:#fff;
+}
+
+
+
+/* MAIN */
+
+main {
+    max-width:900px;
+    margin:0 auto;
+    padding:20px;
+}
+main > h1 {
+    line-height:1;
+    margin:0 0 20px 0;
+}
+
+/* file-upload */
+.file-upload > .error {
+    color:#f00;
+}
+
+/* list-images */
+.list-images {
+    width:100%;
+}
+.list-images thead > tr {
+    color:#fff;
+    background:#999;
+}
+.list-images tbody > tr {
+    border-bottom:1px solid #999;
+    transition:background-color .3s ease-in-out;
+}
+.list-images tbody > tr:hover {
+    background:#eee;
+}
+.list-images th,
+.list-images td {
+    line-height:1;
+    padding:10px 15px;
+    font-size:.875rem;
+}
+.list-images td {
+    vertical-align:top;
+}
+.list-images td.image > img {
+    width:150px !important;
+    height:auto !important;
+    vertical-align:top;
+}
+.list-images td.history > div:not(:last-child) {
+    margin-bottom:10px;
+}
+.list-images td code {
+    padding:2px 5px;
+    font-size:.75rem;
+    font-weight:700;
+    white-space:nowrap;
+    background:#eee;
+    border:1px solid #ccc;
+    border-radius:2px;
+}
+.list-images td.update > span {
+    display:inline-block;
+    padding:7px 10px;
+    color:#fff;
+    font-weight:700;
+    background:#666;
+    vertical-align:top;
+    cursor:pointer;
+    border-radius:3px;
+    transition:background-color .3s ease-in-out;
+}
+.list-images td.update > span:hover {
+    background-color:#000;
+}

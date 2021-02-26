@@ -1,0 +1,14 @@
+Django==3.1.7
+psycopg2==2.8.6
+Pillow==8.1.0
+django-environ==0.4.5
+django-debug-toolbar==3.2
+django-extensions==3.1.1
+django-crispy-forms==1.11.1
+django-htmlmin==0.11.0
+django-admin-rangefilter==0.7.0
+django-admin-autocomplete-filter==0.6.1
+django-extra-fields==3.0.2
+django-field-history==0.8.0
+django-anymail==8.2
+djangorestframework==3.12.2

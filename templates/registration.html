@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+    <h1>Регистрация</h1>
+
+    <div class="registration-page">
+
+        {% crispy form %}
+
+        <a href="{% url 'apps_core:auth' %}">Авторизация</a>
+
+    </div>
+
+{% endblock content %}
