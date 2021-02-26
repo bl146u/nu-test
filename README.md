@@ -1,1 +1,1 @@
-# nu-test
+# Neural University Test
